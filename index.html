@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castro Law Offices, P.C. | Family Law Attorney | Novato, Marin County</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #1a3a4a;
+      --teal-dark: #0f2535;
+      --teal-mid: #224060;
+      --teal-light: #2a5570;
+      --gold: #c8943a;
+      --gold-light: #dca84e;
+      --gold-pale: #f5e9d6;
+      --white: #ffffff;
+      --off-white: #f7f5f1;
+      --text: #2b2b2b;
+      --text-light: #5a5a5a;
+      --border: #ddd4c5;
+      --accent-blue: #4a90b8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--teal-dark);
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .nav-logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .nav-logo-sub {
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 22px !important;
+      border-radius: 3px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--teal-dark) !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: var(--teal-dark);
+      padding: 24px 32px 32px;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu ul li a {
+      display: block;
+      padding: 14px 0;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu ul li:last-child a { border-bottom: none; }
+    .mobile-menu ul li a:hover { color: var(--gold-light); }
+
+    .mobile-menu .mobile-cta {
+      margin-top: 20px;
+      display: block;
+      background: var(--gold);
+      color: var(--white);
+      text-align: center;
+      padding: 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 50%, var(--teal-light) 100%);
+      display: flex;
+      align-items: center;
+      padding: 72px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=60') center/cover no-repeat;
+      opacity: 0.06;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    /* Decorative water-like curves */
+    .hero-waves {
+      position: absolute;
+      bottom: 4px; left: 0; right: 0;
+      height: 80px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,148,58,0.15);
+      border: 1px solid rgba(200,148,58,0.4);
+      color: var(--gold-light);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 14px;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--gold-light); color: var(--teal-dark); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.35);
+      font-weight: 500;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    /* Hero Right — Credentials Card */
+    .hero-right {}
+
+    .firm-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .firm-card-header {
+      background: rgba(200,148,58,0.18);
+      border-bottom: 1px solid rgba(200,148,58,0.3);
+      padding: 20px 24px;
+    }
+
+    .firm-card-header h3 {
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .firm-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .firm-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .firm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .attorney-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .attorney-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .attorney-initials {
+      width: 38px;
+      height: 38px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .attorney-row-name {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.88rem;
+      line-height: 1.1;
+    }
+
+    .attorney-row-title {
+      font-size: 0.74rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .firm-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .firm-languages {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .firm-languages strong {
+      color: var(--gold-light);
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      background: var(--gold);
+      padding: 16px 40px;
+    }
+
+    .trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .trust-item span { font-size: 1.1rem; }
+
+    .trust-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* ─── SECTIONS ─── */
+    .section { padding: 90px 40px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.75;
+      max-width: 600px;
+    }
+
+    /* ─── ABOUT / TEAM ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+      margin-top: 10px;
+    }
+
+    .about-text p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .service-areas {
+      background: var(--off-white);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-top: 10px;
+    }
+
+    .service-areas h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .service-areas p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .team-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .team-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(200,148,58,0.12);
+    }
+
+    .team-card-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .team-card-avatar.gold-bg { background: var(--gold); }
+
+    .team-card-name {
+      font-weight: 600;
+      color: var(--teal-dark);
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .team-card-role {
+      font-size: 0.76rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .team-section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 14px;
+      margin-top: 8px;
+    }
+
+    /* ─── PRACTICE AREAS ─── */
+    .practice-bg { background: var(--off-white); }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .practice-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 26px 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .practice-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(26,58,74,0.1);
+      border-color: var(--gold);
+    }
+
+    .practice-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .practice-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+
+    .practice-card p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-bg { background: var(--teal-dark); }
+    .testimonials-bg .section-title { color: var(--white); }
+    .testimonials-bg .section-label { color: var(--gold-light); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 26px 24px;
+      transition: background 0.2s;
+    }
+
+    .testimonial-card:hover { background: rgba(200,148,58,0.07); border-color: rgba(200,148,58,0.28); }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-stars span { color: var(--gold); font-size: 0.9rem; }
+
+    .testimonial-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--teal-dark);
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.85rem;
+    }
+
+    .testimonial-case {
+      font-size: 0.74rem;
+      color: rgba(255,255,255,0.42);
+    }
+
+    /* ─── WHY US ─── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .why-card {
+      border-top: 3px solid var(--gold);
+      padding-top: 24px;
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .why-card h3 {
+      font-size: 1.05rem;
+      color: var(--teal-dark);
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 0.87rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--gold) 0%, #a87030 100%);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.4rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--teal-dark);
+      padding: 14px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-white:hover { background: var(--teal-dark); color: var(--white); transform: translateY(-2px); }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.6);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ─── CONTACT ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 48px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+      color: var(--teal-dark);
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gold-pale);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .lang-flags {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .lang-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-form h3 {
+      font-size: 1.4rem;
+      color: var(--teal-dark);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--teal); }
+
+    .form-group textarea { height: 100px; resize: vertical; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--teal-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--gold); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--teal-dark);
+      padding: 48px 40px 28px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 28px;
+    }
+
+    .footer-tagline {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .footer-links { display: flex; gap: 60px; }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.28);
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ─── CONCEPT BADGE ─── */
+    .concept-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--teal-dark);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 7px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(200,148,58,0.3);
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .concept-badge strong { color: var(--gold-light); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        gap: 40px;
+      }
+
+      .hero h1 { font-size: 2.4rem; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .practice-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .team-grid { grid-template-columns: 1fr; }
+
+      .section { padding: 64px 24px; }
+
+      .footer-top { flex-direction: column; gap: 36px; }
+      .footer-links { gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 { font-size: 1.95rem; }
+      .section-title { font-size: 1.8rem; }
+      .practice-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .trust-inner { gap: 20px; }
+      .trust-divider { display: none; }
+      .cta-section h2 { font-size: 1.85rem; }
+      .footer-links { flex-direction: column; gap: 28px; }
+      .lang-flags { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <span class="nav-logo-main">Castro Law Offices, P.C.</span>
+      <span class="nav-logo-sub">Family Law • Novato, Marin County</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">Our Firm</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="nav-cta">Request Consultation</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">Our Firm</a></li>
+      <li><a href="#practice" onclick="closeMobile()">Practice Areas</a></li>
+      <li><a href="#team" onclick="closeMobile()">Our Team</a></li>
+      <li><a href="#testimonials" onclick="closeMobile()">Testimonials</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta" onclick="closeMobile()">Request Consultation →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">Novato & Marin County Family Law</div>
+        <h1>Navigating You Through <em>Rough Waters</em></h1>
+        <p class="hero-tagline">Compassionate. Skilled. Relentlessly Committed.</p>
+        <p class="hero-sub">Castro Law Offices, P.C. is a family-owned, veteran-owned firm serving Marin County and the Bay Area. We fight for families during life's most difficult moments — with the dedication and respect you deserve.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Request a Consultation →</a>
+          <a href="tel:4154329866" class="btn-outline">📞 415.432.9866</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="firm-card">
+          <div class="firm-card-header">
+            <h3>"Navigating you through rough waters."</h3>
+          </div>
+          <div class="firm-card-body">
+            <div class="firm-badge-row">
+              <div class="firm-badge">🎖️ Veteran Owned</div>
+              <div class="firm-badge">👨‍👩‍👧 Family Owned</div>
+              <div class="firm-badge">🗣️ Spanish Speaking</div>
+              <div class="firm-badge">🌎 Serving Bay Area</div>
+            </div>
+            <div class="firm-divider"></div>
+            <div class="attorney-list">
+              <div class="attorney-row">
+                <div class="attorney-initials">JC</div>
+                <div>
+                  <div class="attorney-row-name">Jeremy Castro</div>
+                  <div class="attorney-row-title">Founding Attorney</div>
+                </div>
+              </div>
+              <div class="attorney-row">
+                <div class="attorney-initials">KG</div>
+                <div>
+                  <div class="attorney-row-name">Kacey Gardner</div>
+                  <div class="attorney-row-title">Senior Attorney</div>
+                </div>
+              </div>
+              <div class="attorney-row">
+                <div class="attorney-initials">NV</div>
+                <div>
+                  <div class="attorney-row-name">Nina Vigarino</div>
+                  <div class="attorney-row-title">Associate Attorney</div>
+                </div>
+              </div>
+            </div>
+            <div class="firm-divider"></div>
+            <div class="firm-languages">
+              Services available in <strong>English</strong>, <strong>Español</strong>, and <strong>Português</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item"><span>🎖️</span> Veteran Owned</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>👨‍👩‍👧</span> Family Owned & Operated</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>🌎</span> Three Languages</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>📍</span> Novato, Marin County</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>⚖️</span> Exclusively Family Law</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About Our Firm</p>
+          <h2 class="section-title">A Family Firm Built for Families</h2>
+          <p>Castro Law Offices, P.C. is located in Novato, California and dedicated exclusively to family law. Founded by attorney Jeremy Castro, our firm was built on a simple belief: families going through difficult legal situations deserve skilled, compassionate, and honest representation.</p>
+          <p>As a veteran-owned and family-owned business, we understand what's truly at stake — your children, your home, your future. We don't just litigate cases. We guide families through some of the hardest chapters of their lives with integrity and purpose.</p>
+          <p>Our multilingual team speaks English, Spanish, and Portuguese, ensuring that every client in Marin County and beyond receives counsel in the language they're most comfortable with.</p>
+          <div class="service-areas">
+            <h4>Areas We Serve</h4>
+            <p>Marin County: Novato, San Rafael, Greenbrae, San Anselmo, Fairfax, Sausalito, Larkspur, Mill Valley, Corte Madera, Ross, West Marin — plus Sonoma, Napa, Solano, San Francisco, and Alameda Counties.</p>
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Our Legal Team</p>
+          <h2 class="section-title" id="team">Meet the Team</h2>
+          <div style="height: 12px;"></div>
+          <p class="team-section-label">Attorneys</p>
+          <div class="team-grid" style="margin-bottom: 16px;">
+            <div class="team-card">
+              <div class="team-card-avatar gold-bg">JC</div>
+              <div>
+                <div class="team-card-name">Jeremy Castro</div>
+                <div class="team-card-role">Founding Attorney</div>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-avatar gold-bg">KG</div>
+              <div>
+                <div class="team-card-name">Kacey Gardner</div>
+                <div class="team-card-role">Senior Attorney</div>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-avatar">NV</div>
+              <div>
+                <div class="team-card-name">Nina Vigarino</div>
+                <div class="team-card-role">Associate Attorney</div>
+              </div>
+            </div>
+          </div>
+          <p class="team-section-label">Support Staff</p>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-card-avatar">DC</div>
+              <div>
+                <div class="team-card-name">Danielle Castro</div>
+                <div class="team-card-role">Legal Administrator</div>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-avatar">SL</div>
+              <div>
+                <div class="team-card-name">Sofia Larios</div>
+                <div class="team-card-role">Intake Specialist</div>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-avatar">LO</div>
+              <div>
+                <div class="team-card-name">Laura Omaña</div>
+                <div class="team-card-role">Senior Paralegal</div>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-avatar">AG</div>
+              <div>
+                <div class="team-card-name">Autumn Gillette-Ford</div>
+                <div class="team-card-role">Senior Paralegal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE AREAS -->
+  <section class="section practice-bg" id="practice">
+    <div class="section-inner">
+      <div style="text-align: center; margin-bottom: 8px;">
+        <p class="section-label" style="text-align: center;">What We Handle</p>
+        <h2 class="section-title" style="text-align: center; margin: 0 auto;">Family Law Practice Areas</h2>
+        <p class="section-lead" style="text-align: center; margin: 16px auto 0;">Exclusively focused on family law, we handle the full spectrum of issues affecting California families.</p>
+      </div>
+      <div class="practice-grid">
+        <div class="practice-card">
+          <div class="practice-icon">👨‍👩‍👧</div>
+          <h3>Family Law & Parentage</h3>
+          <p>Legal parent-child relationships, court recognition, and parental rights and obligations.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🏠</div>
+          <h3>Child Custody</h3>
+          <p>Joint or sole custody arrangements, educational and medical decision-making rights.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">💍</div>
+          <h3>Divorce Law</h3>
+          <p>Experienced Marin County divorce representation to protect your interests throughout proceedings.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🧬</div>
+          <h3>Paternity Law</h3>
+          <p>California parentage laws, genetic testing, and court-order representation for all parties.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">💰</div>
+          <h3>Spousal Support</h3>
+          <p>Spousal and domestic support orders following the dissolution of marriage or partnership.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🔄</div>
+          <h3>Order Modifications</h3>
+          <p>Modify existing custody, visitation, or support orders when circumstances change.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🧸</div>
+          <h3>Adoption Law</h3>
+          <p>Guiding families through California adoption proceedings with care and expertise.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🛡️</div>
+          <h3>Domestic Violence & Restraining Orders</h3>
+          <p>Protective orders against spouses, cohabitants, partners, and close relatives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">Why Castro Law</p>
+      <h2 class="section-title">What Makes Us Different</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🎖️</div>
+          <h3>Veteran Owned</h3>
+          <p>Jeremy Castro served his country before serving his community. That same discipline, commitment, and integrity defines how we practice law every single day.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍👩‍👧</div>
+          <h3>Family Owned & Operated</h3>
+          <p>Danielle Castro works alongside Jeremy in the practice. We're not a faceless corporation — we're a real family serving real families through the toughest moments.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🌎</div>
+          <h3>Trilingual Services</h3>
+          <p>We serve our diverse Bay Area community in English, Spanish, and Portuguese — because every client deserves to understand every step of their case.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚖️</div>
+          <h3>Exclusively Family Law</h3>
+          <p>We don't dabble. Family law is all we do, which means deeper expertise, sharper strategy, and better outcomes for our clients in Marin County courts.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3>Responsive Communication</h3>
+          <p>Our team is known for staying in contact. Jeremy personally gets back to clients late into the evening. You'll never feel left in the dark about your own case.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Honest & Transparent</h3>
+          <p>We give you a real assessment of your case from day one — not just what you want to hear. Transparency builds trust, and trust gets results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-bg" id="testimonials">
+    <div class="section-inner">
+      <p class="section-label">Client Voices</p>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"As a single father of three boys, I felt doomed thinking the state would favor the mother. Jeremy was very empathetic and worked diligently to get me in a good position. During the hearing, he was very stern and aggressive at the right moments. In the end, we obtained an agreement best suited for the children."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Abraham B.</div>
+              <div class="testimonial-case">Child Custody, Napa County</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"Jeremy Castro helped me with an adoption after my daughter's dad passed away. Jeremy and his wife Danielle were there every step of the way for us! Jeremy's passion for helping bring families together was so delightful. I'm so grateful they were there."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">E</div>
+            <div>
+              <div class="testimonial-name">Erin C.</div>
+              <div class="testimonial-case">Adoption, Marin County</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"I highly recommend Jeremy Castro and his associates. They know and apply the law to achieve the best possible outcome, communicate in a fair and straightforward manner, and reduce the tension in an otherwise emotional setting. First class performance!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">J</div>
+            <div>
+              <div class="testimonial-name">John C.</div>
+              <div class="testimonial-case">Family Law, Marin County</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Ready to Take the First Step?</h2>
+    <p>Family law matters are time-sensitive. Request a confidential consultation with our team today.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-white">Request a Consultation</a>
+      <a href="tel:4154329866" class="btn-outline-white">📞 Call 415.432.9866</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Request a Consultation</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Castro Law Offices, P.C.</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Novato, California<br>Serving All of Marin County</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">415.432.9866</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⚖️</div>
+            <div>
+              <div class="contact-label">Practice Focus</div>
+              <div class="contact-value">Exclusively Family Law</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🗺️</div>
+            <div>
+              <div class="contact-label">Counties Served</div>
+              <div class="contact-value">Marin, Sonoma, Napa, Solano, San Francisco, Alameda</div>
+            </div>
+          </div>
+          <div class="lang-flags">
+            <div class="lang-chip">🇺🇸 English</div>
+            <div class="lang-chip">🇲🇽 Español</div>
+            <div class="lang-chip">🇧🇷 Português</div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Tell Us About Your Situation</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Your first name" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(415) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label>Preferred Language</label>
+              <select>
+                <option>English</option>
+                <option>Español</option>
+                <option>Português</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Area of Need</label>
+            <select>
+              <option value="">Select a practice area...</option>
+              <option>Child Custody</option>
+              <option>Divorce</option>
+              <option>Spousal / Domestic Support</option>
+              <option>Paternity / Parentage</option>
+              <option>Adoption</option>
+              <option>Domestic Violence / Restraining Order</option>
+              <option>Custody / Support Modification</option>
+              <option>Other Family Law Matter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Brief Description</label>
+            <textarea placeholder="Tell us a bit about your situation — this is confidential..."></textarea>
+          </div>
+          <button class="form-submit">Request a Consultation →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-main">Castro Law Offices, P.C.</span>
+            <span class="nav-logo-sub">Family Law • Novato, CA</span>
+          </div>
+          <p class="footer-tagline">"Navigating you through rough waters."</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Practice Areas</h4>
+            <ul>
+              <li><a href="#practice">Child Custody</a></li>
+              <li><a href="#practice">Divorce</a></li>
+              <li><a href="#practice">Spousal Support</a></li>
+              <li><a href="#practice">Adoption</a></li>
+              <li><a href="#practice">Domestic Violence</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Firm</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#team">Our Team</a></li>
+              <li><a href="#testimonials">Client Stories</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Castro Law Offices, P.C. All rights reserved.</span>
+        <span>Novato, CA • Serving Marin County & the Bay Area</span>
+      </div>
+      <p class="footer-disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Viewing this website does not create an attorney-client relationship. Prior results do not guarantee a similar outcome. Castro Law Offices, P.C. is licensed to practice law in the State of California.</p>
+    </div>
+  </footer>
+
+  <!-- CONCEPT BADGE -->
+  <div class="concept-badge">Concept by <strong>Par4 Technology Solutions</strong></div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobile() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
